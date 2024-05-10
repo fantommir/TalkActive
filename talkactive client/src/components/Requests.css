@@ -1,0 +1,107 @@
+.requests-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.requests-content{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60vw;
+}
+.friend-requests-container{
+    padding: 1vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    height: 75vh;
+    width: 50%;
+    background-color: rgba(255, 166, 0, 0.539);
+    border-right: 1px solid black;
+}
+.friend-requests-container > ul {
+    height: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    overflow-y: auto;
+}
+.friend-requests-container > ul > li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(255, 77, 0, 0.529);
+    margin: 5px 0;
+    border-radius: 5px;
+    padding: 0.3vmax 0.5vmax;
+}
+.friend-requests-container > ul > li > p {
+    margin-left: 1vmax;
+    font-size: 17px;
+}
+.friend-requests-container > ul > li > img {
+    width: 4vmax;
+    height: 4vmax;
+    border-radius: 50%;
+}
+.friend-requests-container > ul > li > button {
+    font-size: 18px;
+    border-radius: 5%;
+    margin-left: auto;
+    border: none;
+}
+.friend-requests-container > ul > li > button:hover {
+    background-color: rgba(128, 128, 128, 0.466);
+    cursor: pointer;
+}
+.sent-friend-requests-container{
+    padding: 1vmax;
+    height: 100%;
+    height: 75vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(255, 166, 0, 0.539);
+}
+.sent-friend-requests-container > ul {
+    height: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    overflow-y: auto;
+}
+.sent-friend-requests-container > ul > li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(255, 77, 0, 0.529);
+    margin: 5px 0;
+    border-radius: 5px;
+    padding: 0.3vmax 0.5vmax;
+}
+.sent-friend-requests-container > ul > li > p {
+    margin-left: 1vmax;
+    font-size: 17px;
+}
+.sent-friend-requests-container > ul > li > img {
+    width: 4vmax;
+    height: 4vmax;
+    border-radius: 50%;
+}
+.sent-friend-requests-container > ul > li > button {
+    font-size: 18px;
+    border-radius: 5%;
+    margin-left: auto;
+    border: none;
+}
+.sent-friend-requests-container > ul > li > button:hover {
+    background-color: rgba(128, 128, 128, 0.466);
+    cursor: pointer;
+}
