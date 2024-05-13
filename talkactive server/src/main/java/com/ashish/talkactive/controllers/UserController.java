@@ -114,4 +114,10 @@ public class UserController {
         userService.cancelSentRequest(payload.get("recipientUserId"), request);
         return new ResponseEntity<>("Friend Request Cancelled!", HttpStatus.OK);
     }
+
+    @PostMapping("/update")
+    public ResponseEntity<?> updateProfile(@RequestBody Map<String, String> payload, HttpServletRequest request) {
+        userService.updateProfile(payload.get("bio"), request);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }

@@ -26,6 +26,7 @@ const Chats = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [image, setImage] = useState('');
   const [filteredFriends, setFilteredFriends] = useState([]);
+  const [isBioPopUpOpen, setIsBioPopUpOpen] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -226,9 +227,9 @@ const Chats = () => {
         {selectedFriend && selectedFriend.id ? (
           <div className="chat-area">
 
-            <div className='selected-user-header'>
+            <div className='selected-user-header' onClick={() => setIsBioPopUpOpen(true)}>
               <div className='selected-user-header-profile-image'>
-                <img src={selectedFriend.profileImage} alt=''/>
+                <img src={selectedFriend.profileImage} alt='' />
               </div>
               <div className='selected-user-header-name-and-status'>
                 <div>{selectedFriend && selectedFriend.name}</div>
@@ -244,7 +245,7 @@ const Chats = () => {
               <form onSubmit={e => sendMessage(e)}>
 
                 <div className="message-input">
-                  {image ? (<div className='image-message-container'><img src={image} alt=''/></div>) : (<input type="text" value={messageInput} onChange={(e) => messageInputHandler(e.target.value)} placeholder="Message..." />)}
+                  {image ? (<div className='image-message-container'><img src={image} alt='' /></div>) : (<input type="text" value={messageInput} onChange={(e) => messageInputHandler(e.target.value)} placeholder="Message..." />)}
                   <label htmlFor="image-upload" className="attach-icon">
                     <IoIosAttach />
                   </label>
@@ -263,6 +264,16 @@ const Chats = () => {
           </div>
         )}
       </div>
+
+      {isBioPopUpOpen && (
+        <div className="bio-container" onClick={() => setIsBioPopUpOpen(false)}>
+          <div className="bio">
+            <h2>{`${selectedFriend.name}'s bio`}</h2>
+            <p>{selectedFriend && selectedFriend.bio}</p>
+          </div>
+        </div>
+      )}
+
     </div>
   )
 }

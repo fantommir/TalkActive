@@ -25,6 +25,8 @@ public class User {
 
     private Status status;
 
+    private String bio;
+
     private String profileImage;
 
     private List<String> friendRequests = new ArrayList<>();

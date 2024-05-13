@@ -218,4 +218,10 @@ public class UserService {
         }
         return sentFriendRequestList;
     }
+
+    public void updateProfile(String bio, HttpServletRequest request){
+        User user = getUserFromJwt(request);
+        user.setBio(bio);
+        userRepository.save(user);
+    }
 }

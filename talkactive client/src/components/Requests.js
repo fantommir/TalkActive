@@ -43,7 +43,7 @@ const Requests = () => {
             {loading ? <Loader /> : (
                 <div className='requests-content'>
 
-                    <div className='friend-requests-container'>
+                    <div className='friendRequests-container'>
                         <div><h2>Friend Requests</h2></div>
                         <ul>
                             {friendRequests && friendRequests.map(r => (
@@ -56,7 +56,7 @@ const Requests = () => {
                         </ul>
                     </div>
 
-                    <div className='sent-friend-requests-container'>
+                    <div className='sentFriendRequests-container'>
                         <div><h2>Sent Friend Requests</h2></div>
                         <ul>
                             {sentFriendRequests && sentFriendRequests.map(s => (
